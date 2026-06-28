@@ -1,0 +1,12 @@
+.hermes/
+.git/
+.cache/
+.cargo/
+.config/
+.local/
+.npm/
+.ssh/
+.termux/
+.termux_authinfo
+storage/
+*.log

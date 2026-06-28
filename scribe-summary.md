@@ -1,0 +1,1 @@
+[2026-06-28 18:30]: Refined the 'save-session.md' protocol by introducing a Temporal Distillation gate (Gate 2) and a mandatory 'Hard Copy' Session Summary gate (Gate 3). This creates a high-density anchor for all subsequent memory updates (Profile/Brain). Also standardized the 'chat.md' log format to eliminate intra-agent spacing and artificial line numbers.
