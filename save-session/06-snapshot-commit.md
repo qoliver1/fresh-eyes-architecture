@@ -28,3 +28,11 @@
 88|---
 89|
 90|**Verification:** Provide the absolute path of the snapshot and confirm: *"State is durable and ready for recovery."*
+91|
+92|**GATE 8: GIT COMMIT (THE ARCHIVE)**
+93|**Action:**
+94|1. **Stage:** `git add .`
+95|2. **Commit:** `git commit -m "Automated Save: [Persona] - [Snapshot Timestamp]"`
+96|3. **Verify:** Confirm successful commit via `git log -1`.
+97|
+98|**Verification:** Provide the absolute path of the snapshot and confirm: *"State is durable, committed to Git, and ready for recovery."*

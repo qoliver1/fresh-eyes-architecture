@@ -9,4 +9,9 @@
 4. **Terminate:** Your role is **Reporter**, not **Editor**. Do not attempt to update any Brain or Profile files.
 
 **Verification:**
-- Confirm that the Delta and Next Step are clearly defined and the file was written to the `inbox/` directory.
+12|- Confirm that the Delta and Next Step are clearly defined and the file was written to the `inbox/` directory.
+13|- **Final Step (Durability):** Stage and commit all changes to Git:
+    - `git add .`
+    - `git commit -m "Quick-Save: [Persona] - [Timestamp]"`
+    - Verify with `git log -1`.
+14|Confirm: *"Delta captured and committed to Git."*
