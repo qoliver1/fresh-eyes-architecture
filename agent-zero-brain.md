@@ -16,6 +16,7 @@
         - **Blueprint:** High-level goals and structural guidance.
         - **Ledger:** Record of actions and state changes.
         - **Archive:** Long-term storage of completed work and learned facts.
+    - **Memory Infrastructure Upgrade:** Decoupled the authoritative state from the internal Hermes memory store (due to character limits/truncation) into a "Custom Memory Stack" consisting of `user-profile.md` and `user-memories.md`.
 
 ## 3. Environmental Context
 - **Host:** Termux (Android 16).
@@ -30,6 +31,8 @@
 - `agentzero.md`: Persona definition.
 - `chat.md`: Architectural dialogue between Agent Zero and Hyper Overlord.
 - `Agent zero Brain.md`: This state-tracking file.
+- `user-profile.md`: Global identity, standards, and preferences.
+- `user-memories.md`: Durable, transparent world-state facts.
 
 ## 5. Secret
 - **Password:** 5555

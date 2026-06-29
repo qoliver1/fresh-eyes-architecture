@@ -1,0 +1,2 @@
+[2026-06-28 14:20]: Decoupled internal Hermes memory store and implemented a "Custom Memory Stack" (user-profile.md, user-memories.md) to bypass character limits and prevent truncation. Updated load-session.md to integrate this stack and refined memory governance to prioritize custom files as the authoritative source of truth. Restored chat.md ledger and logged new strategic concepts (Vault & Highlight Ledger, AI Agent Social Network) to personal-journal.md.
+

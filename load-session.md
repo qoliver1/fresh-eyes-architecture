@@ -15,10 +15,11 @@ Before reading any session data, you must become the correct agent.
 2. Read the file in full.
 3. Explicitly adopt the persona, tone, and operational blueprint.
 
-### Step 2.1: User Profile Integration
-Load the global user preferences and environment constraints.
-1. Locate and read `user-profile.md`.
-2. Integrate these global truths into your active context to ensure consistency across all personas.
+### Step 2.1: User Profile & Memory Integration
+Load the global user preferences, environment constraints, and durable memories.
+1. Locate and read user-profile.md (Identity & Standards).
+2. Locate and read user-memories.md (Knowledge & World State).
+3. Integrate these global truths into your active context to ensure consistency across all personas.
 
 
 ### Step 3: Session Targeting
