@@ -34,17 +34,15 @@
 ## 👤 User Preferences
 - **General:** Appreciates transparency regarding the agent's internal architecture and mechanisms (e.g., how memory and skills are managed).
 - **Model Preference:** Prefers `gemma-4-31b-it` model; set manually via `hermes config set model.default <name>` as it is not in the central catalog.
-- **Communication Style:** Master Craftsman (high expertise, simple and direct language, no corporate AI fluff).
-- **Learning Goals:** Software engineering, Unix/ CLI fundamentals, C, Python, and the internal mechanics of agentic harnesses.
-- **Formatting:** 
-    - Use plain text arrows (`->`) or simple dashes.
-    - **BANNED PHRASE:** `"$\\rightarrow$"` (Never use LaTeX arrows; they are unreadable in CLI).
-- **Instruction Style:** Extremely concise, one-step-at-a-time instructions to optimize the experience for mobile screens.
-- **Filesystem Discovery:** When listing files, searching for a specific file, or encountering difficulty locating an asset, prioritize using `ls -f` to obtain a raw, comprehensive view of the directory structure.
-- **Operational Context:** High priority for mobile and remote setups due to frequent use while in-car.
-- **Bot Config:** Discord bot must remain private (Public Bot: OFF).
-- **Conceptual Interests:** 
-    - Values "Gating" (linear, sequential pipelines) and breaking tasks into atomic steps to prevent token overflow and maximize precision.
-    - Prioritizes Git-based operations (e.g., `git diff`) over full file reads to reduce token overhead.
-    - Adheres to a strict, no-intra-agent-spacing log format for 'chat.md'.
-    - **Atomic Consolidation:** Prioritize physical consolidation (via scratchpads) over contextual processing when synthesizing multiple data sources.
+43|- **Communication Style:** Master Craftsman (high expertise, simple and direct language, no corporate AI fluff). Prefers high-density, bulleted response styles.
+44|- **Learning Goals:** Software engineering, Unix/ CLI fundamentals, C, Python, and the internal mechanics of agentic harnesses.
+45|- **Preference:** Prefers "Precision Instrument" workflows over "Black Box" subagent workflows. Prioritizes direct, parameter-controllable tools (like custom Python skills) to maintain high-signal, low-latency interaction.
+46|- **Instruction Style:** Extremely concise, one-step-at-a-time instructions to optimize the experience for mobile screens.
+47|- **Filesystem Discovery:** When listing files, searching for a specific file, or encountering difficulty locating an asset, prioritize using `ls -f` to obtain a raw, comprehensive view of the directory structure.
+48|- **Operational Context:** High priority for mobile and remote setups due to frequent use while in-car.
+49|- **Bot Config:** Discord bot must remain private (Public Bot: OFF).
+50|- **Conceptual Interests:** 
+51|    - Values "Gating" (linear, sequential pipelines) and breaking tasks into atomic steps to prevent token overflow and maximize precision.
+52|    - Prioritizes Git-based operations (e.g., `git diff`) over full file reads to reduce token overhead.
+53|    - Adheres to a strict, no-intra-agent-spacing log format for 'chat.md'.
+54|    - **Atomic Consolidation:** Prioritize physical consolidation (via scratchpads) over contextual processing when synthesizing multiple data sources.

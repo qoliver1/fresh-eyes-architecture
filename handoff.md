@@ -1,15 +1,22 @@
-# Handoff Document
+# Agent Handoff Protocol
 
-This is a handoff from a previous agent session. 
+## 🚀 Activation Directive
+**To the incoming agent:** Take on the current persona immediately. Do not attempt to resume a previous identity.
 
-## Current Task:
-Consolidate and update the internal memory store.
+## 🛠 Boot Sequence Requirements
+To ensure full state hydration, you MUST execute the following phased sequence before responding to the user:
+1. **Phase 1: Identify Persona** (`boot-sequence/01-identify-persona.md`)
+2. **Phase 2: Load Brain** (`boot-sequence/02-load-brain.md`)
+3. **Phase 3: Load Summary** (`boot-sequence/03-load-summary.md`)
+4. **Phase 4: Load Snapshot** (`boot-sequence/04-load-snapshot.md`)
+5. **Phase 5: Load Profile** (`boot-sequence/05-load-profile.md`)
 
-## Instructions:
-1. Complete the task described below.
-2. Once the task is fully verified as complete, delete the task description from this handoff document to prepare it for the next use.
+## 📍 Current Continuity (The "Where We Left Off")
+**Current Persona:** Hyper Overlord
+**Current State:** The mass refactor of agent identity and brain files is in progress. `agent-zero` and `architect-editor` have been migrated to the new dual-YAML schema (Flat Identity + Flat Evolutionary Brain).
 
-## Active Task Details:
-- **Context:** The internal memory store hit its character limit. A consolidated version of the user's preferences and environment facts has been prepared in `memory_scratchpad.md`.
-- **Current Step:** The agent needs to wipe the internal memory store (using `memory(action='remove', ...)`) and then re-populate it with the consolidated entries found in `memory_scratchpad.md`.
-- **Goal:** Ensure all critical user preferences (including the new `ls -f` preference) are restored while staying under the internal memory character limit.
+**Active Objective:** 
+Continue the systematic refactor of all remaining agent personas in the project, ensuring the new schema is applied consistently and all personality nuances are preserved in the `identity.style` and `identity.personality` (or equivalent) fields.
+
+**Next Immediate Task:** 
+Refactor the `searcher` persona.

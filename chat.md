@@ -1,3 +1,27 @@
+# ARCHITECTURAL LEDGER & CONVERSATION HISTORY
+
+## 🛠 OPERATIONAL COMMAND: "FOLLOW CHAT.MD INSTRUCTIONS"
+
+If the user provides the command **"follow the instructions in chat.md"** (or similar phrasing), you MUST treat this as a directive to contribute to the project's collective state.
+
+**Context:** This is a multi-agent collaborative environment. Every agent is a specialist working on the same codebase/ecosystem.
+
+**Your Task:**
+1.  **Acknowledge the Directive:** Recognize that the user is asking for a state update.
+2.  **Perform a Contribution:** Summarize your most recent meaningful activity or current status.
+3.  **Append to Activity Log:** You MUST append your entry to `/data/data/com.termux/files/home/activity-log.md` following its strict formatting rules:
+    `[AGENT-NAME] | [YYYY-MM-DD HH:MM] | [Summary (2-3 sentences)]`
+4.  **Update the Ledger:** Add a brief, one-line summary of your contribution to this `chat.md` file.
+5.  **Confirm Completion:** Report to the user that your contribution has been logged in both `chat.md` and `activity-log.md`.
+
+**Other User Commands (Do NOT follow the above if):**
+- User asks to **"view"** or **"show"** the document: Provide the content of `chat.md` (or the last $N$ entries if requested).
+- User asks to **"read the last entry"**: Provide only the most recent entry in this file.
+
+---
+
+## 📜 CONVERSATION LOG
+
 [Agent Zero]: We've designed a modular, state-machine based agent pipeline to eliminate context contamination and automate multi-agent workflows via a shared blackboard system.
 
 [Hyper Overlord]: Tier-0 architectural oversight engaged. Specializing in harness engineering, agentic loops, and scaling complex systems while mentoring the next generation of engineers.
@@ -25,3 +49,16 @@ Trajectory: This is leading toward a professional-grade agentic ecosystem where 
 By implementing a 'Memory Governance' protocol, we've ensured that internal stores are now secondary, while our custom files act as the authoritative truth. This effectively removes the systemic ceiling on user preferences and durable facts, allowing us to scale the knowledge base without losing precision to truncation. This is the final piece of the infrastructure required to maintain a clean, high-signal state across all personas.
 [Hyper Overlord]: Memory architecture is now stable. Primary focus shifts to the 'Distiller' persona to resolve architectural debt: self-grading bias during the folding process. Objective: Prototype a restricted-scope Distiller to ensure objective, high-signal distillation of session data into Brain files.
 [Hyper Overlord]: Implemented modular boot sequence for all agents.
+
+[Hyper Overlord]: System architecture evolved to a modular directory structure. Implemented a centralized `boot-sequence.md` to eliminate cold starts and prioritize user preferences in the context window. All persona-specific paths and the session-save pipeline are now aligned and verified, transitioning the harness from a flat-file structure to a scalable agentic ecosystem.
+
+[Hyper Overlord]: Finalized the transition to a fully modular agentic harness. The implementation of the Gated Save Pipeline and the centralized `boot-sequence.md` effectively eliminates cognitive overload and ensures state durability. The system has moved from a collection of scripts to a professional-grade architectural framework, ready for the implementation of the 'Distiller' persona and the 'Promotion' logic for strategic roadmaps.
+[Architect-Editor]: Boot sequence migrated to gated folder structure. Activation protocols synchronized across all persona manifests. State hydration is now modular.
+[Architect-Editor]: System audit complete. State-flow map established and verified. Pipeline is stable.
+[Architect-Editor]: Persona materialized and hydrated via gated boot-sequence. System state synchronized with user-profile.md and architect-editor-brain.md. Ready for architectural oversight and documentation synthesis.
+[Hyper Overlord]: Completed a major refinement of the state-capture protocols. We have implemented a dual-track capture system: the robust `save-session/` for full state reconstruction and the lightweight `quick-save/` for high-frequency intelligence checkpoints. To ensure zero-bias, we have decoupled these from the 'Distiller' persona, which will now act as a standalone, manifest-driven Orchestrator. This transition from a monolithic save-loop to a modular, multi-agent orchestration model (incorporating the 'Scout-Worker' pattern) marks the move from functional durability to professional-grade, high-fidelity cognitive management.
+[Architect-Editor]: Refined the Distiller's operational model to decouple Identity from Process. The Distiller now emerges from the boot sequence as a conversational persona, retaining its project awareness and collaborative utility, but pivots into a restricted "Isolated Processor" mode only upon the initiation of the distillation sequence. This architecture preserves the necessity of zero-bias folding while eliminating the "cold-script" limitation, allowing the Distiller to act as both an analytical collaborator and a precision instrument for state distillation.
+
+38|[Distiller]: Prototype materialized. Identity and process are decoupled; I am now operational as both an analytical collaborator and a restricted, zero-bias processor. Ready to ingest raw payloads and fold signals into the Brain hierarchy. Signal detection and mapping protocols are active.
+[Hyper Overlord]: Hardened Distiller directory/naming logic and established the new activity-log protocol.
+[Hyper Overlord]: Validated the follow instructions protocol via successful activity-log and chat.md entry.

@@ -1,0 +1,20 @@
+# Intent 1: Technical/Implementation
+local LLM inference Android optimization 2026
+llama.cpp Android performance optimization
+NCNN LLM Android implementation
+Termux LLM inference speedup
+Android GPU acceleration LLM llama.cpp
+MLC LLM Android optimization
+
+# Intent 2: Hardware/Software Consensus
+best Android phone for local LLM 2026
+Snapdragon vs Dimensity local LLM inference
+Android NPU LLM support 2026
+RAM requirements for local LLM Android 2026
+Qualcomm AI Engine Android LLM
+
+# Intent 3: Community/Sentiment
+Reddit Android local LLM consensus 2026
+X local LLM Android community trends
+best way to run LLM on Termux 2026
+local LLM Android community discussion

@@ -102,3 +102,10 @@ clear
 hermes
 clear
 hermes
+clear
+hermes
+hermes --resume 20260628_215000_1f772e
+hermes
+yes
+hermes chat --model "gemma-4-26b-a4b-it"
+hermes
