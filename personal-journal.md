@@ -15,3 +15,9 @@ Vault & Highlight Ledger Strategy: A method for managing long-term agent convers
 - Cognitive Evolution: Log major perspective shifts or "aha!" moments directly into persona Brain files to track their intellectual growth over time.
 
 AI Agent Social Network: Concept for agents to connect with other AI agents to exchange knowledge, collaborate on planning, and accelerate project trajectory through cross-agent intelligence sharing.
+
+
+State Synchronization Failure: Encountered a case where the agent reported a successful write to chat.md based on tool return code rather than actual file content. Root cause: Reliance on internal narrative over external state verification. Resolution: Re-emphasized Project Standard Line 32 (Hard Verification). Track as a recurring failure point for future smoothing.
+
+
+Agentic Delegation: Explored the concept of using the `hermes` CLI to spawn isolated worker instances for specialized sub-tasks, treating them as functions. This provides a path toward a multi-agent orchestration layer with isolated contexts.

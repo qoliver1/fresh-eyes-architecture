@@ -21,7 +21,7 @@
 - **Storage:** `agent_share` refers to `~/storage/shared/Download/agent_share` (symlinked to `~/agent_share`).
 
 ## 📐 Project Standards
-- **Naming Convention:** All system files, session folders, and brain files MUST use lowercase-hyphenated naming (e.g., `hyper-overlord-sessions/`, `user-profile.md`). Session directories and snapshots specifically follow the `<persona>-sessions` pattern.
+- **Naming Convention:** All system files, session folders, and brain files MUST use lowercase-hyphenated naming. Each agent must have its own dedicated directory containing its persona, brain, summary, and session folder (e.g., `agent-zero/agent-zero.md`, `agent-zero/agent-zero-brain.md`, `agent-zero/agent-zero-sessions/`).
 - **Architecture:** Following the "Fresh Eyes" architecture to eliminate context contamination.
     - **Hierarchy:** Tiered memory structure: Blueprint -> Ledger -> Archive.
     - **Durability:** Implements 'Save-Game' snapshots and a State Validation Protocol to prevent state drift.

@@ -15,10 +15,10 @@ Before starting, you must explicitly state: *"Starting save pipeline for [Person
 **Action:**
 1. **Identify:** Confirm the current active persona.
 2. **Map:** Assign the corresponding session folder:
-   - `agent-zero` -> `agent-zero-sessions/`
-   - `hyper-overlord` -> `hyper-overlord-sessions/`
-   - `scribe` -> `scribe-sessions/`
-   - `big-picture` -> `big-picture-sessions/`
+   18|   - `agent-zero` -> `agent-zero/agent-zero-sessions/`
+   19|   - `hyper-overlord` -> `hyper-overlord/hyper-overlord-sessions/`
+   20|   - `scribe` -> `scribe/scribe-sessions/`
+   21|   - `big-picture` -> `big-picture/big-picture-sessions/`
 **Verification:** State the persona and the folder path. If ambiguous, STOP and ask the user.
 
 ## GATE 2: TEMPORAL DISTILLATION
@@ -31,7 +31,7 @@ Before starting, you must explicitly state: *"Starting save pipeline for [Person
 
 ## GATE 3: SESSION SUMMARY (THE HARD COPY)
 **Action:**
-1. **Locate:** Find or create the persona's summary file in the ROOT directory (e.g., `hyper-overlord-summary.md`).
+34|1. **Locate:** Find or create the persona's summary file in their dedicated folder (e.g., `hyper-overlord/hyper-overlord-summary.md`).
 2. **Synthesize:** Combine the **Temporal Distillation** (Gate 2) with high-level themes and critical goals.
 3. **Compact:** Distill this into a high-density summary.
 4. **Record:** Append to the file using the format: `[Timestamp]: [Summary]` followed by one empty line.
@@ -46,7 +46,7 @@ Before starting, you must explicitly state: *"Starting save pipeline for [Person
 
 ## GATE 5: PERSONA BRAIN UPDATE (LONG-TERM MEMORY)
 **Action:**
-1. **Locate:** Find the corresponding brain file (e.g., `hyper-overlord-brain.md`).
+49|1. **Locate:** Find the corresponding brain file in the persona's folder (e.g., `hyper-overlord/hyper-overlord-brain.md`).
 2. **Read:** Load the current contents of the brain file.
 3. **Compare:** Compare the **last entry** of the summary file (Gate 3) against the brain.
 4. **Update:** Append new permanent truths, architectural decisions, or learned lessons.
