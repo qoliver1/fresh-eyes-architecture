@@ -86,3 +86,11 @@ clear
 exit
 clear
 hermes
+clear
+hermes
+clear
+hermes
+clear
+hermes
+clear
+hermes
