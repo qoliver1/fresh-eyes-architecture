@@ -9,3 +9,5 @@
 - **Error Containment:** Sub-agent failures are contained and reported as structured signals, allowing the Orchestrator to maintain stability.
 - **Scalability:** Enables future parallel processing of multiple agent payloads.
 **Status:** Captured in `system-backlog.md` as [Priority: Low] | Multi-Agent Orchestration.
+
+/model google/gemini-2.5-flash

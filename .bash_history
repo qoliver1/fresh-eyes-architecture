@@ -109,3 +109,20 @@ hermes
 yes
 hermes chat --model "gemma-4-26b-a4b-it"
 hermes
+ls
+cd distiller/
+ls
+la
+ls
+cd ..
+ls
+cd architect-editor
+ls
+cd ..
+ls
+ls 
+cd searcher
+ls
+cd ..
+ls
+hermes
