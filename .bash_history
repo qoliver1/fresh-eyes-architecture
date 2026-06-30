@@ -126,3 +126,12 @@ ls
 cd ..
 ls
 hermes
+lals
+lslala
+ls
+cd chat.md
+chat.md
+cp chat.md agent-share
+clear
+ls
+hermes
