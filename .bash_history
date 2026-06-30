@@ -135,3 +135,7 @@ cp chat.md agent-share
 clear
 ls
 hermes
+hernesHermes
+hermes
+pkg install glow
+sshd

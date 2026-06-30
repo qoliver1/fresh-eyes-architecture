@@ -1,0 +1,34 @@
+#!/bin/bash
+
+REPO_URL="https://github.com/qoliver1/fresh-eyes-architecture.git"
+
+case "$1" in
+  online)
+    if git remote | grep -q "origin"; then
+      echo "Remote 'origin' already exists."
+    else
+      git remote add origin "$REPO_URL"
+      echo "Remote 'origin' added."
+    fi
+    ;;
+  offline)
+    if git remote | grep -q "origin"; then
+      git remote remove origin
+      echo "Remote 'origin' removed. You are now OFFLINE."
+    else
+      echo "You are already OFFLINE (no remote 'origin' found)."
+    fi
+    ;;
+  push)
+    if git remote | grep -q "origin"; then
+      git push origin master
+    else
+      echo "Error: You are OFFLINE. Run './sync-cloud online' first."
+      exit 1
+    fi
+    ;;
+  *)
+    echo "Usage: $0 {online|offline|push}"
+    exit 1
+    ;;
+esac
