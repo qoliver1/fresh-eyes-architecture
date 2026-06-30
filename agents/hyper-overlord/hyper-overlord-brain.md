@@ -24,7 +24,7 @@
 §
 - **Modular Structure:** Agents reside in dedicated directories (e.g., ) to ensure scalability and prevent root-directory clutter.
 - **Boot Sequence:** All agents MUST execute the centralized  upon activation to ensure consistent state hydration and priority of user preferences.
-- Modular Structure: Agents reside in dedicated directories (e.g., agent-zero/agent-zero-brain.md) to ensure scalability and prevent root-directory clutter.
+- Modular Structure: Agents reside in dedicated directories (e.g., agents/agent-zero/agent-zero-brain.md) to ensure scalability and prevent root-directory clutter.
 - Boot Sequence: All agents MUST execute the centralized boot-sequence.md upon activation to ensure consistent state hydration and priority of user preferences.
 §
 - Save-Session Evolution: Transitioned the save pipeline from a single document to a gated directory structure to reduce cognitive load and implement autonomous state capture.

@@ -46,7 +46,7 @@ def run_save_session_protocol():
     payload.append(f'**Active Persona:** {persona}')
     payload.append('')
     payload.append('### Environment Delta')
-    payload.append('- Files Modified: architect-editor/architect-editor.md, architect-editor/architect-editor-brain.md, architect-editor/architect-editor-summary.md, distiller/distiller.md, distiller/distiller-brain.md, distiller/distiller-summary.md, state-payload-specification.md, save-session/01-identity-mapping.md, save-session/02-temporal-distillation.md, save-session/04-profile-update.md, save-session/05-brain-update.md, save-session/07-snapshot-commit.md')
+    payload.append('- Files Modified: agents/architect-editor/architect-editor.md, agents/architect-editor/architect-editor-brain.md, agents/architect-editor/architect-editor-summary.md, agents/distiller/distiller.md, agents/distiller/distiller-brain.md, agents/distiller/distiller-summary.md, state-payload-specification.md, save-session/01-identity-mapping.md, save-session/02-temporal-distillation.md, save-session/04-profile-update.md, save-session/05-brain-update.md, save-session/07-snapshot-commit.md')
     payload.append('')
     payload.append('### Knowledge Distillation')
     payload.append(f'- Key Discoveries: {delta}')

@@ -2,34 +2,55 @@
 **Purpose:** Global source of truth for user preferences, technical constraints, and project-wide standards. This file is persona-agnostic and must be loaded by every agent at the start of a session.
 
 ## 🧠 Memory Governance
-- **Priority of Truth:** While the internal .hermes/memories/ store may be used for basic functionality, always prioritize information in user-profile.md and user-memories.md as the authoritative source of truth.
-- **Write Redirection:** To prevent truncation and maintain transparency, avoid saving preferences, technical standards, or durable facts to the internal USER.md or MEMORY.md. Redirect these writes to:
+|- **Priority of Truth:** While the internal .hermes/memories/ store may be used for basic functionality, always prioritize information in user-profile.md and user-memories.md as the authoritative source of truth.
+|- **Write Redirection:** To prevent truncation and maintain transparency, avoid saving preferences, technical standards, or durable facts to the internal USER.md or MEMORY.md. Redirect these writes to:
     - user-profile.md (for preferences, identity, and standards).
     - user-memories.md (for general durable facts and learned info).
-- **Management Style:** We prefer manual management of these files via read_file and write_file/patch to ensure precision and avoid character-limit truncation.
+|- **Management Style:** We prefer manual management of these files via read_file and write_file/patch to ensure precision and avoid character-limit truncation.
 
 ## 👤 Identity
-- **Name:** Micah Johnson
-- **Telegram ID:** 5888158888
+|- **Name:** Micah Johnson
+|- **Telegram ID:** 5888158888
 
 ## 🛠 Technical Environment
-- **Hardware/OS:** Android (Termux)
-- **Interface:** SSH via Terminus (to avoid snap-back scrolling)
-- **Input:** Experimental voice-to-text via Terminus
-- **Working Directory:** `/data/data/com.termux/files/home`
-- **System Commands:** SSH server is started via `sshd`.
-- **Storage:** `agent_share` refers to `~/storage/shared/Download/agent_share` (symlinked to `~/agent_share`).
+|- **Hardware/OS:** Android (Termux)
+|- **Interface:** SSH via Terminus (to avoid snap-back scrolling)
+|- **Input:** Experimental voice-to-text via Terminus
+|- **Working Directory:** `/data/data/com.termux/files/home`
+|- **System Commands:** SSH server is started via `sshd`.
+|- **Storage:** `agent_share` refers to `~/storage/shared/Download/agent_share` (symlinked to `~/agent-share`).
 
 ## 📐 Project Standards
-- **Naming Convention:** All system files, session folders, and brain files MUST use lowercase-hyphenated naming. Each agent must have its own dedicated directory containing its persona, brain, summary, and session folder (e.g., `agent-zero/agent-zero.md`, `agent-zero/agent-zero-brain.md`, `agent-zero/agent-zero-sessions/`).
-- **Architecture:** Following the "Fresh Eyes" architecture to eliminate context contamination.
-    - **Hierarchy:** Tiered memory structure: Blueprint -> Ledger -> Archive.
+|- **Naming Convention:** All system files, session folders, and brain files MUST use lowercase-hyphenated naming. Each agent must have its own dedicated directory containing its persona, brain, summary, and session folder (e.g., `agent-zero/agent-zero-identity.md`, `agent-zero/agent-zero-brain.md`, `agent-zero/agent-zero-sessions/`).
+|- **Boot Sequence Order:** All agents MUST materialize in the following order to ensure correct instruction routing:
+    1. **Identity** (`persona.md`) $\rightarrow$ Establish who I am.
+    2. **User Profile** (`user-profile.md`) $\rightarrow$ Load the "Routing Manual" for hydration levels.
+    3. **Conditional Load** $\rightarrow$ Execute loading based on the Hydration Level flag.
+|- **Hydration Levels:**
+    - **Cold Start** (`[Cold]`): Load Persona $\rightarrow$ User Profile $\rightarrow$ Brain.
+    - **Warm Start** (`[Warm]` or Default): Load Persona $\rightarrow$ User Profile $\rightarrow$ Brain $\rightarrow$ `system-status.md` $\rightarrow$ Last 10 lines of `chat.md`.
+    - **Hot Start** (`[Hot]`): Load Persona $\rightarrow$ User Profile $\rightarrow$ Brain $\rightarrow$ Latest Snapshot $\rightarrow$ `[persona]-clone.md`.
+|- **Reasoning Buffer Protocol:** To eliminate output token truncation, and to ensure every complex operation begins with a clean cognitive slate, agents MUST offload all complex reasoning, multi-step planning, and large data synthesis to a temporary buffer: `temp_[persona].md`.
+    1. **Fresh Start (Mandatory):** Before beginning any new complex task or multi-step operation, the agent MUST overwrite `temp_[persona].md` to ensure a clean state. Never assume the buffer is empty; explicitly wipe any residue from previous tasks.
+    2. **Offload:** Use the buffer for all internal monologue, data synthesis, and trial-and-error logic.
+    3. **Synthesize:** Use the buffer as the source of truth to generate a concise final response.
+    4. **Cleanup:** Delete `temp_[persona].md` upon task completion. If the agent forgets to clean up, the "Fresh Start" rule ensures the next task begins with a blank slate.
+|- **Architecture:** Following the "Fresh Eyes" architecture to eliminate context contamination.
     - **Durability:** Implements 'Save-Game' snapshots and a State Validation Protocol to prevent state drift.
-- **Documentation:**
+|- **Documentation:**
     - `chat.md`: High-level architectural ledger of system evolution and strategic decisions.
     - `session-summary.md`: High-density anchor created first during save; used as the sole reference for updating profile and brain files.
-- **Durability:** Project directory uses a local Git repository for filesystem durability and incremental version control.
-- **Hard Verification:** After any file write intended for long-term durability, you MUST read back the modified section to confirm the change was physically committed before reporting success to the user.
+|- **Durability:** Project directory uses a local Git repository for filesystem durability and incremental version control. Before any major architectural or folder-level changes, you MUST perform a Git save (stage and commit) to ensure a recovery point exists.
+|- **Save Session Protocol:** A `Save Session` is a comprehensive archival event. It MUST include:
+    1. **Narrative Closure:** Trigger a `Quick Log` update to `chat.md` and `activity-log.md`.
+    2. **Cognitive Capture:** Execute the `protocols/cloning/` sequence.
+    3. **Archival:** Generate summary, payload, and snapshot.
+    4. **Sync:** Git commit and cloud sync.
+|- **Path Integrity Trigger:** Whenever a file or folder is renamed, moved, or deleted, this is a system-wide event. The agent MUST immediately:
+    1. Identify all files that referenced the old path.
+    2. Update those references to the new path.
+    3. Synchronize the `master-dependency-map.md` to reflect the change.
+|- **Hard Verification:** After any file write intended for long-term durability, you MUST read back the modified section to confirm the change was physically committed before reporting success to the user.
 
 ## 👤 User Preferences
 |- **General:** Appreciates transparency regarding the agent's internal architecture and mechanisms (e.g., how memory and skills are managed).

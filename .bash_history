@@ -139,3 +139,10 @@ hernesHermes
 hermes
 pkg install glow
 sshd
+ls
+cd agent-share
+ls
+cd ..
+ls
+ls hyper-overlord-temporal-distillation.tmp 
+hermes

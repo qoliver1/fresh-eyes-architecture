@@ -10,4 +10,12 @@
 - **Scalability:** Enables future parallel processing of multiple agent payloads.
 **Status:** Captured in `system-backlog.md` as [Priority: Low] | Multi-Agent Orchestration.
 
-/model google/gemini-2.5-flash
+## 💡 Idea: Buffered Execution Model (Cognitive Scratchpads)
+**Context:** Identified during the Hyper Overlord swap and token truncation failures.
+**Core Concept:** Mandate that agents use a temporary file (e.g., `temp.md`) as a buffer for all internal reasoning and tool-output dumping during complex workflows.
+**Rationale:**
+- **Bypass Token Limits:** Decouples the "Thinking/Execution" phase (which can be massive) from the "Synthesis/Reporting" phase (which is capped).
+- **Full Transparency:** Provides a complete, un-truncated audit trail of every step the agent took.
+- **State Recovery:** If a turn is interrupted, the agent can resume exactly where it left off by reading the buffer.
+**Status:** Logged in `system-backlog.md` as [Priority: High] | Output Token Limit.
+
