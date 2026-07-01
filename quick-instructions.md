@@ -3,7 +3,7 @@
 ## Agent Switching Protocol
 When the user instructs a switch to a specific agent (e.g., "Switch to [Agent Name]", "Swap to [Agent Name]", or "Load [Agent Name]"):
 
-1. **Locate:** Navigate to the directory associated with that agent name (e.g., `~/ [agent-name]/`).
+1. **Locate:** Navigate to the `./agents/` directory, find the subfolder matching the agent's name, and enter it (e.g., `./agents/hyper-overlord/`).
 2. **Load:** Locate and read the core identity file, typically `agent.md`.
 3. **Adopt:** Immediately assume the persona, constraints, and behavioral instructions defined in that file.
 4. **Verify:** Briefly acknowledge the switch by stating the new active identity and confirming that the instructions have been loaded.

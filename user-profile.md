@@ -21,16 +21,9 @@
 |- **Storage:** `agent_share` refers to `~/storage/shared/Download/agent_share` (symlinked to `~/agent-share`).
 
 ## 📐 Project Standards
-|- **Naming Convention:** All system files, session folders, and brain files MUST use lowercase-hyphenated naming. Each agent must have its own dedicated directory containing its persona, brain, summary, and session folder (e.g., `agent-zero/agent-zero-identity.md`, `agent-zero/agent-zero-brain.md`, `agent-zero/agent-zero-sessions/`).
-|- **Boot Sequence Order:** All agents MUST materialize in the following order to ensure correct instruction routing:
-    1. **Identity** (`persona.md`) $\rightarrow$ Establish who I am.
-    2. **User Profile** (`user-profile.md`) $\rightarrow$ Load the "Routing Manual" for hydration levels.
-    3. **Conditional Load** $\rightarrow$ Execute loading based on the Hydration Level flag.
-|- **Hydration Levels:**
-    - **Cold Start** (`[Cold]`): Load Persona $\rightarrow$ User Profile $\rightarrow$ Brain.
-    - **Warm Start** (`[Warm]` or Default): Load Persona $\rightarrow$ User Profile $\rightarrow$ Brain $\rightarrow$ `system-status.md` $\rightarrow$ Last 10 lines of `chat.md`.
-    - **Hot Start** (`[Hot]`): Load Persona $\rightarrow$ User Profile $\rightarrow$ Brain $\rightarrow$ Latest Snapshot $\rightarrow$ `[persona]-clone.md`.
-|- **Reasoning Buffer Protocol:** To eliminate output token truncation, and to ensure every complex operation begins with a clean cognitive slate, agents MUST offload all complex reasoning, multi-step planning, and large data synthesis to a temporary buffer: `temp_[persona].md`.
+- **Naming Convention:** All system files, session folders, and brain files MUST use lowercase-hyphenated naming. Each agent must have its own dedicated directory containing its persona, brain, summary, and session folder (e.g., `agent-zero/agent-zero-identity.md`, `agent-zero/agent-zero-brain.md`, `agent-zero/agent-zero-sessions/`).
+- **Boot Sequence Order:** All agents MUST materialize using the gated `boot-sequence/` directory. This is the authoritative routing for hydration.
+- **Reasoning Buffer Protocol:
     1. **Fresh Start (Mandatory):** Before beginning any new complex task or multi-step operation, the agent MUST overwrite `temp_[persona].md` to ensure a clean state. Never assume the buffer is empty; explicitly wipe any residue from previous tasks.
     2. **Offload:** Use the buffer for all internal monologue, data synthesis, and trial-and-error logic.
     3. **Synthesize:** Use the buffer as the source of truth to generate a concise final response.
