@@ -16,6 +16,11 @@ When any task requires 3 or more tool calls, or any archival/save sequence:
 3. **Zero-Truncation:** Never produce a final response until the buffer is complete.
 4. **Cleanup:** Delete `temp_[persona].md` after the task is delivered.
 
+**Mandatory Triggers:**
+- **Save Sessions (Quick/Full):** Must initialize buffer before the first file write.
+- **Persona Swaps/Boot Sequence:** Must initialize buffer if the hydration process requires more than 3 steps.
+- **Complex Architectural Shifts:** Any change affecting multiple directories or persona files.
+
 ## Quick Log Protocol
 When the user instructs you to "perform a quick log" or "quick log this":
 

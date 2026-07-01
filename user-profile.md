@@ -34,11 +34,13 @@
     - `chat.md`: High-level architectural ledger of system evolution and strategic decisions.
     - `session-summary.md`: High-density anchor created first during save; used as the sole reference for updating profile and brain files.
 |- **Durability:** Project directory uses a local Git repository for filesystem durability and incremental version control. Before any major architectural or folder-level changes, you MUST perform a Git save (stage and commit) to ensure a recovery point exists.
-|- **Save Session Protocol:** A `Save Session` is a comprehensive archival event. It MUST include:
+|- **Save Session Protocol:** A `Save Session` is a comprehensive archival event. It MUST follow this strict sequence:
+    0. **Reasoning Buffer:** Immediately initialize `temp_[persona].md` to map the save plan and track progress.
     1. **Narrative Closure:** Trigger a `Quick Log` update to `chat.md` and `activity-log.md`.
     2. **Cognitive Capture:** Execute the `protocols/cloning/` sequence.
     3. **Archival:** Generate summary, payload, and snapshot.
     4. **Sync:** Git commit and cloud sync.
+    5. **Cleanup:** Delete the reasoning buffer.
 |- **Path Integrity Trigger:** Whenever a file or folder is renamed, moved, or deleted, this is a system-wide event. The agent MUST immediately:
     1. Identify all files that referenced the old path.
     2. Update those references to the new path.
