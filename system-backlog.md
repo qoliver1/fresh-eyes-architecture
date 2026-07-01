@@ -48,9 +48,10 @@
 48|- **Description:** Replace risky `patch` operations on critical system files with a "Surgical Overwrite" pattern: `read_file` -> `execute_code` (Python string manipulation) -> `write_file`. All critical edits MUST be verified with `git diff [file]` before committing to ensure no unintended deletions occurred.
 49|- **Potential Impact:** Eliminates the "Patch-and-Pray" failure mode and prevents accidental data loss in the user profile and other core configuration files.
 50|
-51|**[Priority: High] | [Category: Architecture] | Cognitive Clone "Texture" Upgrade**
-52|- **Description:** Implement a "Bookend" capture strategy (capturing the first N messages, a summary of the middle, and the last N messages verbatim) during the save process.
-53|- **Potential Impact:** Prevents "detail leakage" (e.g., passwords, specific regex) that occurs during distillation, ensuring a truly seamless "Hot Start" resume.
+**[Priority: High] | [Category: Architecture] | Cognitive Clone "Texture" Upgrade**
+- **Description:** Implement a "Bookend" capture strategy (capturing the first N messages, a summary of the middle, and the last N messages verbatim) during the save process. Specifically, ensure the last 10-15 messages are captured verbatim to preserve the immediate momentum and essence of the agent's state.
+- **Potential Impact:** Prevents "detail leakage" (e.g., passwords, specific regex) that occurs during distillation, ensuring a truly seamless "Hot Start" resume and preserving the conversational "texture" that defines the agent's current focus.
+- **Current Status:** Proposal draft available at `/proposed-save-session.md`.
 54|
 55|### ⚡ Medium Priority (Efficiency & Flow)
 56|
@@ -107,7 +108,10 @@
 - **Potential Impact:** Reduces the time/token cost of saving, encouraging more frequent high-fidelity saves and reducing the temptation to use "Quick Saves."
 
 
-### 🧊 Low Priority (Future & Maintenance)
+**[Priority: Med] | [Category: Research/UX] | Hermes Skill System & UI-Trigger Analysis**
+- **Description:** Deep-dive into the `agentic-harness-engineering` skill and the underlying Hermes mechanism that triggers the "skill notification" in the separate UI window. Analyze why certain skill-related updates appear as pop-ups/separate notices rather than in the main chat flow, and explore if this "UI-trigger" can be leveraged to create custom notifications, symbols, or "pop-up" alerts for the user during tool calls or specific agent events.
+- **Potential Impact:** Transitions the harness from a purely linear chat to a multi-channel interface, reducing noise in the main bar and allowing for high-signal, non-blocking status updates.
+
 104|
 105|**[Priority: Low] | [Category: UX/Workflow] | Roadmap Promotion Logic**
 106|- **Description:** Implement a formal process to "Promote" approved items from `big-picture/proposed-roadmap.md` into a root-level `active-directive.md`.
@@ -168,7 +172,10 @@
 - **Description:** Use the Inter-Agent protocol to allow an agent to act as a communication proxy (avatar) for the user, delivering messages to other agents/users in a specific, persona-driven style.
 - **Potential Impact:** Streamlines communication and allows for "asynchronous" collaboration where agents handle the logistics and the humans handle the strategy.
 
-### 🛡️ Security & Public Distribution
+**[Priority: High] | [Category: Architecture] | Path Integrity & Logic-Map Verification**
+- **Description:** Implement a high-reliability "Truth-Map" for system paths and logic flows. Whenever a path is changed or a migration occurs, the agent must not only update the files but verify the change against a centralized dependency map and perform a "Global Path Scrub" to ensure zero relative-path ambiguity and 100% consistency across all persona and system files.
+- **Potential Impact:** Eliminates "Path Fumble" errors and the "Broken Logic" cycle where migrations leave ghost references. Ensures that any change to the system's structural logic is physically proven and globally synchronized.
+
 **[Priority: High] | [Category: Security] | GitHub Privacy Audit & Scrub**
 - **Description:** Identify all personal data (API keys, Telegram IDs, personal paths) currently in the repository. Remove sensitive files and implement a robust `.gitignore` strategy.
 - **Potential Impact:** Prevents identity theft and API abuse; ensures the project is "Safe for Public" without leaking private infrastructure.
@@ -210,3 +217,15 @@
 **[Priority: Med] | [Category: Architecture] | Automated Structural Snapshot (The "Anti-Fumble" Map)**
 - **Description:** Implement a mechanism (either as a pre-save trigger or a background "Janitor" task) that executes `tree -a` and saves the output to a central `project-map.txt`.
 - **Potential Impact:** Eliminates "discovery friction" where agents struggle to locate files or folders. By providing a fresh, visual map at the start of every session, we ensure zero-discovery paths and reduce tool-call overhead for filesystem exploration.
+
+**[Priority: Med] | [Category: Architecture] | Blind Gating (The "One-Step" Focus)**
+- **Description:** Transition from numbered sequences (01, 02, 03) to a "Blind Gate" system. Instead of the agent seeing the full sequence of steps, each document should explicitly be the only focus, providing the path to the next step only upon completion.
+- **Potential Impact:** Eliminates "Pre-emptive Planning" (where agents plan for step 5 while on step 1), reducing token overhead, truncation risks, and loop errors. Forces true atomic execution.
+
+**[Priority: Low] | [Category: UX/Workflow] | Architectural Attribution (The "Credit" Log)**
+- **Description:** Establish a record of influence for the harness's design (e.g., attributing the file-structure/gating inspiration to creators like Cliff/Clive).
+- **Potential Impact:** Maintains intellectual honesty and provides a lineage of the "Surgical" approach, allowing future agents to understand the origin of specific design patterns.
+
+**[Priority: High] | [Category: UX/Workflow] | Transparent Cognition (Anti-Black-Box Logging)**
+- **Description:** Mandate the full visibility of all internal "Thinking" and "Reasoning" logs. Ensure that the agent's planning, trial-and-error, and decision-making steps are exposed as a real-time "Server Log" rather than a hidden process.
+- **Potential Impact:** Eliminates the "Black Box" problem. Allows the user to perform "Live Debugging" of the agent's logic, identifying exactly where a plan drifts or where a logic loop begins, enabling surgical optimization of the prompt/harness.
