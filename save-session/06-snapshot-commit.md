@@ -1,9 +1,11 @@
 # GATE 6: SNAPSHOT COMMIT (BLOCK 3: COMMIT)
 
-**Action:** 
-1. **Generate:** Create a file in the persona's session folder using the format `YYYY-MM-DD_HHmm_snapshot.md`.
-2. **Populate:** Use the data from **Block 1** and **Block 2** to fill the snapshot template.
+**Action:**
+1. **Capture State:** Generate the final session snapshot and the cognitive clone.
+2. **Archive Clone:** Write the current cognitive state to `agents/[persona]/clones/[timestamp]_clone.md`.
+3. **Archive Snapshot:** Save the general session snapshot to the timestamped session folder.
+4. **Commit:** Perform a Git commit of the persona directory to lock the state.
 
-**Verification:** Provide the absolute path of the snapshot.
+**Verification:** Confirm both the snapshot and the timestamped clone were written.
 
-**Next Step:** Continue within **Block 3** $\rightarrow$ Proceed to `./save-session/07-update-pointer.md`.
+**Next Step:** Proceed to `./save-session/07-update-pointer.md`.

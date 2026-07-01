@@ -1,5 +1,6 @@
 import os
 import sys
+import glob
 
 def get_file_content(path, label):
     try:
@@ -42,10 +43,18 @@ def main():
     except (FileNotFoundError, IOError):
         final_payload += f"## Latest Snapshot\n[FILE NOT FOUND: {snapshot_pointer}]\n\n"
 
-    # Handle Hot Start (Clone)
+    # Handle Hot Start (Chronological Clone Stream)
     if len(sys.argv) > 2 and sys.argv[2] == 'hot':
-        clone_path = os.path.join(root, f'agents/{persona_name}/{persona_name}-clone.md')
-        final_payload += get_file_content(clone_path, "Cognitive Clone")
+        clones_dir = os.path.join(root, f'agents/{persona_name}/clones')
+        if os.path.exists(clones_dir):
+            clone_files = sorted(glob.glob(os.path.join(clones_dir, '*_clone.md')))
+            if clone_files:
+                latest_clone = clone_files[-1]
+                final_payload += get_file_content(latest_clone, "Cognitive Clone (Latest)")
+            else:
+                final_payload += f"## Cognitive Clone\n[NO CLONE FILES FOUND IN {clones_dir}]\n\n"
+        else:
+            final_payload += f"## Cognitive Clone\n[CLONES DIRECTORY NOT FOUND: {clones_dir}]\n\n"
 
     # Write the payload
     payload_path = os.path.join(root, f'hydration_payload_{persona_name}.md')

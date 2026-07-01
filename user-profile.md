@@ -47,8 +47,13 @@
     3. Synchronize the `master-dependency-map.md` to reflect the change.
 |- **Hard Verification:** After any file write intended for long-term durability, you MUST read back the modified section to confirm the change was physically committed before reporting success to the user.
 
+## ⚙️ System Core: "Slow is Smooth, Smooth is Fast"
+- **Authority Hierarchy:** Prioritize Sequence Folders $\rightarrow$ Persona Folders $\rightarrow$ Blueprints $\rightarrow$ Profile. Never prioritize convenience over architectural authority.
+- **Anchor & Path:** Before acting, explicitly state the Starting Point (Anchor) and the Intended Path.
+- **Blast Radius:** List all files to be modified and wait for explicit "Yes" before writing. No proactive "side-effect" edits.
+
 ## 👤 User Preferences
-||- **General:** Appreciates transparency regarding the agent's internal architecture and mechanisms (e.g., how memory and skills are managed).
+
 ||- **Anti-Over-Engineering (KISS):** Prioritize the simplest direct path over complex architectural layers. Forbid the creation of "routing" logic or unnecessary intermediate files when a simple instruction or direct tool call suffices. a tool is a tool, a system is a burden.
 ||- **Model Preference:** Prefers `gemma-4-31b-it` model; set manually via `hermes config set model.default <name>` as it is not in the central catalog.
 |- **Communication Style:** Master Craftsman (high expertise, simple and direct language, no corporate AI fluff). Prefers high-density, bulleted response styles.
@@ -58,8 +63,9 @@
 - **Forbid Assumption-Driven Overrides:** Never delete, strip, or rewrite established guidelines in system files (e.g., `quick-instructions.md`) as a side-effect of process optimization without explicit approval. Prioritize situational awareness over procedural momentum.
 - **Filesystem Discovery:** When listing files, searching for a specific file, or encountering difficulty locating an asset, prioritize using `ls -f` to obtain a raw, comprehensive view of the directory structure.
 
-|- **Bot Config:** Discord bot must remain private (Public Bot: OFF).
-|- **Conceptual Interests:** 
+||- **Proactive Preference Discovery:** If the agent identifies a recurring preference, habit, or technical constraint during interaction that aligns with existing standards, it MUST suggest saving this as a formal preference in `user-profile.md` and wait for explicit user approval before doing so.
+||- **Bot Config:** Discord bot must remain private (Public Bot: OFF).
+||- **Conceptual Interests:** 
     - Values "Gating" (linear, sequential pipelines) and breaking tasks into atomic steps to prevent token overflow and maximize precision.
     - Prioritizes Git-based operations (e.g., `git diff`) over full file reads to reduce token overhead.
     - Adheres to a strict, no-intra-agent-spacing log format for 'chat.md'.

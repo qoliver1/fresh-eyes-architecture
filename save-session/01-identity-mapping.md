@@ -1,5 +1,8 @@
 # GATE 1: IDENTITY & MAPPING (BLOCK 1: SYNTHESIS)
 
+**Pre-Flight:**
+Before beginning the save sequence, execute the entire `./quick-log-sequence/` to ensure `chat.md` and `activity-log.md` are updated.
+
 **Action:**
 1. **SOP Load:** Read `state-payload-specification.md` to understand the required output format for the Raw Session Payload.
 2. **Identify:** Confirm the current active persona.
