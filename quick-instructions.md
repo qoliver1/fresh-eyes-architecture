@@ -14,8 +14,7 @@ When any task requires 3 or more tool calls, or any archival/save sequence:
 1. **Initialize:** Immediately create `temp_[persona].md` and log the plan.
 2. **Surgical Execution:** Use the "swap-back-and-forth" pattern: Write thought $\rightarrow$ Tool Call $\rightarrow$ Read Result $\rightarrow$ Write synthesis to `temp` $\rightarrow$ Repeat.
 3. **Zero-Truncation:** Never produce a final response until the buffer is complete.
-4. **Zero-Discovery:** During known procedural sequences (Boot, Save, Log), use explicit paths. `search_files` is strictly forbidden unless a hard-coded path fails.
-5. **Cleanup:** Delete `temp_[persona].md` after the task is delivered.
+4. **Cleanup:** Delete `temp_[persona].md` after the task is delivered.
 
 **Mandatory Triggers:**
 - **Save Sessions (Quick/Full):** Must initialize buffer before the first file write.

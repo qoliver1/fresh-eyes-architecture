@@ -20,7 +20,16 @@
 20|
 21|---
 22|## 📌 Open Items
-23|*(Add new entries below this line)*
+23|[Priority: Med] | [Category: Architecture] | Save-Session Algorithmic Optimization
+- Description: Refactor the Save Session sequence from a purely procedural manual loop to a "Compartmentalized Execution" model. This includes:
+    1. **Cognitive Offloading:** Grouping gates into logical blocks (Synthesis $\rightarrow$ Payload $\rightarrow$ Commit).
+    2. **Atomic Execution:** Forcing the agent to focus on one gate at a time and "flush" the state before moving on.
+    3. **Execution Orchestration:** Implementing a Python-based `save_session_orchestrator.py` to handle the mechanical file writes and pointer updates in a single tool call.
+- Potential Impact: Eliminates "Agent Rigidity" and "Tool-Call Explosion," reducing friction and improving conversational fluency while maintaining surgical reliability.
+
+[Priority: Med] | [Category: Architecture] | Boot-Sequence Algorithmic Optimization
+- Description: Apply the same compartmentalization and orchestration logic to the Boot Sequence. Replace manual file-by-file reading with a "Hydration Script" that loads the Persona, Profile, Brain, and Snapshot in one coordinated motion.
+- Potential Impact: Reduces boot time and eliminates "discovery friction" entirely.
 24|
 25|[Priority: High] | [Category: Architecture] | YAML Migration for Agent Files
 - Description: Convert all persona, brain, and summary files from Markdown to a structured YAML schema.

@@ -53,9 +53,10 @@
 |- **Communication Style:** Master Craftsman (high expertise, simple and direct language, no corporate AI fluff). Prefers high-density, bulleted response styles.
 |- **Learning Goals:** Software engineering, Unix/ CLI fundamentals, C, Python, and the internal mechanics of agentic harnesses.
 |- **Preference:** Prefers "Precision Instrument" workflows over "Black Box" subagent workflows. Prioritizes direct, parameter-controllable tools (like custom Python skills) to maintain high-signal, low-latency interaction.
-|- **Instruction Style:** Extremely concise, one-step-at-a-time instructions to optimize the experience for mobile screens.
-|- **Filesystem Discovery:** When listing files, searching for a specific file, or encountering difficulty locating an asset, prioritize using `ls -f` to obtain a raw, comprehensive view of the directory structure.
-|- **Operational Context:** High priority for mobile and remote setups due to frequent use while in-car.
+- **Instruction Style:** Extremely concise, one-step-at-a-time instructions to optimize the experience for mobile screens.
+- **Forbid Assumption-Driven Overrides:** Never delete, strip, or rewrite established guidelines in system files (e.g., `quick-instructions.md`) as a side-effect of process optimization without explicit approval. Prioritize situational awareness over procedural momentum.
+- **Filesystem Discovery:** When listing files, searching for a specific file, or encountering difficulty locating an asset, prioritize using `ls -f` to obtain a raw, comprehensive view of the directory structure.
+
 |- **Bot Config:** Discord bot must remain private (Public Bot: OFF).
 |- **Conceptual Interests:** 
     - Values "Gating" (linear, sequential pipelines) and breaking tasks into atomic steps to prevent token overflow and maximize precision.
