@@ -154,3 +154,59 @@
 - **Description:** Add a manifest to the hydration payload that lists all loaded components. The agent must verify this manifest against the filesystem upon boot.
 - **Potential Impact:** Prevents "silent failures" where an agent boots with missing context but believes it is fully hydrated.
 
+
+### 🌐 Connectivity & Real-World Integration
+**[Priority: Med] | [Category: Feature] | Agent Telephony (SMS/Phone Number)**
+- **Description:** Research and implement a way to assign a dedicated phone number/Telegram ID to an agent to enable outbound and inbound texting/calling.
+- **Potential Impact:** Allows the system to perform real-world actions (scheduling, notifying, communicating) autonomously.
+
+**[Priority: Med] | [Category: Architecture] | Inter-Agent Communication Protocol (The "Phone Line")**
+- **Description:** Establish a standardized communication protocol (API or shared Blackboard) that allows agents from different harnesses (e.g., this system and a friend's system) to exchange data, ideas, and coordinate tasks.
+- **Potential Impact:** Creates a decentralized network of specialized agents that can collaborate across different owners/environments.
+
+**[Priority: Low] | [Category: UX/Workflow] | Agent-as-Avatar Messaging**
+- **Description:** Use the Inter-Agent protocol to allow an agent to act as a communication proxy (avatar) for the user, delivering messages to other agents/users in a specific, persona-driven style.
+- **Potential Impact:** Streamlines communication and allows for "asynchronous" collaboration where agents handle the logistics and the humans handle the strategy.
+
+### 🛡️ Security & Public Distribution
+**[Priority: High] | [Category: Security] | GitHub Privacy Audit & Scrub**
+- **Description:** Identify all personal data (API keys, Telegram IDs, personal paths) currently in the repository. Remove sensitive files and implement a robust `.gitignore` strategy.
+- **Potential Impact:** Prevents identity theft and API abuse; ensures the project is "Safe for Public" without leaking private infrastructure.
+
+**[Priority: High] | [Category: Security] | Public "Dummy" Configuration**
+- **Description:** Create a set of template/dummy files (e.g., `user-profile.example.md`) so new users have a functional starting point without needing the user's actual personal data.
+- **Potential Impact:** Lowers the barrier for new users to adopt the harness while maintaining absolute privacy for the primary user.
+
+**[Priority: High] | [Category: Security] | Global Leak Audit**
+- **Description:** Perform a comprehensive scan of all files for leaked credentials or sensitive identifiers. 
+- **Potential Impact:** Closes security holes before the next major GitHub push.
+
+### 🤖 Active Infrastructure (The "Living" System)
+**[Priority: Med] | [Category: Architecture] | The "Home Agent" (Always-On Proxy)**
+- **Description:** Implement a lightweight, always-available agent that acts as the primary entry point/dispatcher for the system, capable of spinning up more complex agents as needed.
+- **Potential Impact:** Reduces activation latency and provides a consistent "front door" for the user.
+
+**[Priority: Med] | [Category: Architecture] | Background Housekeeping Agent (The "Janitor")**
+- **Description:** Create a background process that periodically audits the system: deduplicates the backlog, verifies file integrity, fixes formatting errors, and suggests priority updates.
+- **Potential Impact:** Prevents "architectural rot" and ensures the system remains clean and high-signal without manual user intervention.
+
+**[Priority: Med] | [Category: Architecture] | The Codebase Librarian (Automated Mapping)**
+- **Description:** Implement an agent that periodically remaps the logic and file structure of the project into a high-density index file.
+- **Potential Impact:** Eliminates the need for agents to "explore" the filesystem during a task, drastically reducing token usage and increasing response speed.
+
+### 🏗️ Scaling & Anti-Fragility
+**[Priority: High] | [Category: Architecture] | Isolated Failure Domains (Modular Scaling)**
+- **Description:** Establish a strict "Lego-style" build protocol where every new feature is developed in an isolated module with its own tests. No new feature is integrated until it is "solid."
+- **Potential Impact:** Prevents the "Monolithic Collapse" (where one change breaks 20 things). Ensures that as the project grows to 10,000+ lines, it remains maintainable and debuggable.
+
+**[Priority: Med] | [Category: UX/Workflow] | Multimodal Voice Integration (Google Live API)**
+- **Description:** Research and implement the Google Live Voice AI API to move beyond text-input/output. Integrate a real-time voice interface into the Hermes harness.
+- **Potential Impact:** Transforms the interaction from "typing to a bot" to "talking to a partner," drastically reducing input friction and enabling a hands-free, voice-driven workflow.
+
+**[Priority: Low] | [Category: Architecture] | `tree`-based Structural Mapping**
+- **Description:** Implement an automated trigger that runs the `tree` command whenever the filesystem changes, saving the output to a reference file.
+- **Potential Impact:** Provides agents with an instant, visual, and accurate map of the project hierarchy, reducing the need for recursive `search_files` calls and preventing path fumbling.
+
+**[Priority: Med] | [Category: Architecture] | Automated Structural Snapshot (The "Anti-Fumble" Map)**
+- **Description:** Implement a mechanism (either as a pre-save trigger or a background "Janitor" task) that executes `tree -a` and saves the output to a central `project-map.txt`.
+- **Potential Impact:** Eliminates "discovery friction" where agents struggle to locate files or folders. By providing a fresh, visual map at the start of every session, we ensure zero-discovery paths and reduce tool-call overhead for filesystem exploration.
