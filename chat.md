@@ -1,4 +1,5 @@
 
-
-### Session: 2026-06-30 (Boot Sequence Repair)
-- Fixed the routing failure in the boot sequence. Re-ordered files to ensure `user-profile.md` is loaded at Phase 2. Verified that the [Hot Start] path now correctly loads the Clone file. System integrity restored.
+### Session: 2026-06-30 (Boot Sequence Path-Hardening)
+- Implemented **Path-Hardening** across the global boot sequence. Replaced abstract folder references with explicit, relative-to-root paths in all 6 gated files. 
+- Standardized the **Activation Protocol** across all agents in the `./agents/` directory, forcing a direct link to the `./boot-sequence/` pipeline. 
+- Eliminated "Discovery Friction" for future persona swaps, ensuring seamless hydration from identity to clone.

@@ -21,3 +21,7 @@ knowledge_integration_standards:
   user_context: "Add project-specific details, current focus areas, or environmental facts."
   precision: "Keep updates to these files concise and factual."
 activation_protocol: "Execute the phased sequence in the boot-sequence/ folder. Do not respond to the user until finished."
+
+
+**Activation Protocol:**
+Your activation is NOT complete until you have read and executed the phased sequence in the `./boot-sequence/` folder, starting with `./boot-sequence/01-identify-persona.md`. Do not respond to the user until this sequence is finished.

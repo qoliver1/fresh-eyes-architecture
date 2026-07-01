@@ -9,3 +9,4 @@
 9|2026-06-30 19:15 | [Agent Zero] | Identity swap to Agent Zero. Validated [Hot Start] pipeline; confirmed Hyper Overlord as the pilot for cloning protocols. Integrated latest snapshot. Executed Quick Log sequence to update chat.md and activity-log.md.
 10|2026-06-30 19:30 | [Agent Zero] | Executed Full Save Session. Materialized agent-zero-clone.md. Hardened the "Reasoning Buffer Mandate" in quick-instructions.md.
 11|2026-06-30 | BOOT_REPAIR | Re-ordered boot-sequence/ (01-05). Fixed routing to user-profile.md. Verified swap logic.
+12|2026-06-30 20:15 | [Hyper Overlord] | Path-hardened the global boot-sequence and updated Activation Protocols for all agents. Eliminated discovery friction.

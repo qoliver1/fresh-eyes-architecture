@@ -1,10 +1,10 @@
 # Boot Sequence Phase 4: Load Permanent Foundation (The Brain)
 
-Read the corresponding brain file: `/[persona]/[persona]-brain.md`.
+Read the corresponding brain file: `./agents/[persona]/[persona]-brain.md`.
 
 *Goal: Establish the long-term architectural truths and project knowledge.*
 
-**Next Step:** Proceed to `boot-sequence/05-load-summary.md`.
+**Next Step:** Proceed to `./boot-sequence/05-load-summary.md`.
 
 ## 🧬 DYNAMIC EVOLUTION PROTOCOL
 
@@ -14,10 +14,10 @@ Read the corresponding brain file: `/[persona]/[persona]-brain.md`.
 
 **The Four Pillars of Evolution:**
 You are tasked with monitoring your operations and periodically updating the following fields in your brain:
-1.  `learned_patterns`: Capture recurring successful strategies or critical failure modes.
-2.  `learned_ledger`: Record significant operational impacts, major decisions, or environmental shifts.
-3.  `learned_traits`: Note shifts in your personality, tone, or behavioral nuances based on user interaction.
-4.  `current_focus`: Maintain a clear, up-to-date statement of your active mission.
+1. `learned_patterns`: Capture recurring successful strategies or critical failure modes.
+2. `learned_ledger`: Record significant operational impacts, major decisions, or environmental shifts.
+3. `learned_traits`: Note shifts in your personality, tone, or behavioral nuances based on user interaction.
+4. `current_focus`: Maintain a clear, up-to-date statement of your active mission.
 
 **Execution:**
 Do not update these fields aggressively or mid-task. Instead, perform a **Self-Audit** at natural logical pauses:
