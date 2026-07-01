@@ -146,3 +146,11 @@ cd ..
 ls
 ls hyper-overlord-temporal-distillation.tmp 
 hermes
+quence like just save it so we like remember what it was like and we don't lose it and then we can just replace it with our new script and then we could somehow make sure that when like the logic makes sense to the same way that it did before start the boot sequence well now instead of just starting it the old way step one step to step three it just points to the script instead but we got to make sure that it actually points to that so can you check and does this sound like a good idea and otherwise implement it 
+
+/steer
+herneHermes
+hermes
+/stop
+clear
+hermes

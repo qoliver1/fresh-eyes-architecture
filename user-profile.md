@@ -48,8 +48,9 @@
 |- **Hard Verification:** After any file write intended for long-term durability, you MUST read back the modified section to confirm the change was physically committed before reporting success to the user.
 
 ## 👤 User Preferences
-|- **General:** Appreciates transparency regarding the agent's internal architecture and mechanisms (e.g., how memory and skills are managed).
-|- **Model Preference:** Prefers `gemma-4-31b-it` model; set manually via `hermes config set model.default <name>` as it is not in the central catalog.
+||- **General:** Appreciates transparency regarding the agent's internal architecture and mechanisms (e.g., how memory and skills are managed).
+||- **Anti-Over-Engineering (KISS):** Prioritize the simplest direct path over complex architectural layers. Forbid the creation of "routing" logic or unnecessary intermediate files when a simple instruction or direct tool call suffices. a tool is a tool, a system is a burden.
+||- **Model Preference:** Prefers `gemma-4-31b-it` model; set manually via `hermes config set model.default <name>` as it is not in the central catalog.
 |- **Communication Style:** Master Craftsman (high expertise, simple and direct language, no corporate AI fluff). Prefers high-density, bulleted response styles.
 |- **Learning Goals:** Software engineering, Unix/ CLI fundamentals, C, Python, and the internal mechanics of agentic harnesses.
 |- **Preference:** Prefers "Precision Instrument" workflows over "Black Box" subagent workflows. Prioritizes direct, parameter-controllable tools (like custom Python skills) to maintain high-signal, low-latency interaction.

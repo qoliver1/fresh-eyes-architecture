@@ -11,3 +11,4 @@
 11|2026-06-30 | BOOT_REPAIR | Re-ordered boot-sequence/ (01-05). Fixed routing to user-profile.md. Verified swap logic.
 12|2026-06-30 20:15 | [Hyper Overlord] | Path-hardened the global boot-sequence and updated Activation Protocols for all agents. Eliminated discovery friction.
 13|2026-06-30 20:45 | [Hyper Overlord] | Hardened Reasoning Buffer triggers in user-profile.md and quick-instructions.md. Mandated buffer for Save Sessions and Persona Swaps.
+2026-07-01: Implemented Payload-Based Hydration, simplified Quick Swap shortcuts, and added KISS guardrail to user-profile.
