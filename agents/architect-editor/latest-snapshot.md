@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/agents/architect-editor/architect-editor-sessions/2026-06-29_1445_snapshot.md

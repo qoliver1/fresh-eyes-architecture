@@ -36,3 +36,5 @@
 96|3. **Verify:** Confirm successful commit via `git log -1`.
 97|
 98|**Verification:** Provide the absolute path of the snapshot and confirm: *"State is durable, committed to Git, and ready for recovery."*
+
+**NEXT STEP:** Proceed to `./save-session/07-update-pointer.md` to lock the recovery bookmark.

@@ -4,4 +4,6 @@ Read the corresponding summary file: `./agents/[persona]/[persona]-summary.md`.
 
 *Goal: Capture the high-level trajectory and recent progress.*
 
-**Next Step:** Proceed to `./boot-sequence/06-load-snapshot.md`.
+**Procedural Gate:**
+1. Write the current project trajectory to `temp_[persona].md`.
+2. Proceed to `./boot-sequence/06-load-snapshot.md`.
