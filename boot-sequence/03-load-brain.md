@@ -1,10 +1,10 @@
-# Boot Sequence Phase 2: Load Permanent Foundation (The Brain)
+# Boot Sequence Phase 3: Load Permanent Foundation (The Brain)
 
 Read the corresponding brain file: `/[persona]/[persona]-brain.md`.
 
 *Goal: Establish the long-term architectural truths and project knowledge.*
 
-**Next Step:** Proceed to `boot-sequence/03-load-summary.md`.
+**Next Step:** Proceed to `boot-sequence/04-load-summary.md`.
 
 ## 🧬 DYNAMIC EVOLUTION PROTOCOL
 
