@@ -22,6 +22,14 @@
 22|## 📌 Open Items
 23|
 24|### 🔥 High Priority (Critical Blockers & Guardrails)
+
+**[Priority: High] | [Category: Architecture] | Boot Sequence Pathing & Discovery Optimization**
+- **Description:** Resolve the "Path Fumble" issue where agents struggle to locate the persona file (`./agents/[persona]/[persona].md`) and the boot sequence (`./boot-sequence/`) despite direct paths being provided. 
+- **Root Cause Analysis:** The agent initially failed to resolve absolute vs. relative paths (trying `/agents/...` instead of `./agents/...`) and failed to locate the boot sequence folder because it didn't verify the root structure first. This led to excessive tool calls and a slow boot.
+- **Potential Impact:** Drastically reduces activation latency and token waste. Ensures a "smooth" and "efficient" boot as intended by the user.
+- **Proposed Fix:** Mandate a "Root Anchor" check (e.g., `ls -f` or `tree`) as the very first action of any boot sequence to establish absolute pathing context.
+
+
 25|
 26|**[Priority: High] | [Category: UX/Workflow] | Anti-Over-Engineering Guardrail**
 27|- **Description:** Implement a strict "KISS" (Keep It Simple, Stupid) directive to prevent agents from over-complicating simple user requests with unnecessary architectural layers or "routing" logic.
@@ -54,6 +62,13 @@
 - **Current Status:** Proposal draft available at `/proposed-save-session.md`.
 54|
 55|### ⚡ Medium Priority (Efficiency & Flow)
+
+**[Priority: Med] | [Category: Architecture] | Pre-Computed Payload System (Instant Hydration)**
+- **Description:** Shift payload generation from the *Boot* process to the *Save* process. Instead of running `hydrate.py` during activation, pre-generate and store dedicated payload files for each level (`payload-cold.md`, `payload-warm.md`, `payload-hot.md`) during the save sequence.
+- **Potential Impact:** Reduces boot-time tool-call overhead from multiple calls (terminal -> script -> read) to a single direct `read_file` call. Enables "seamless agent swapping" and higher-velocity multi-agent orchestration.
+- **Research Note:** Investigate if Hermes supports any "context mounting" or direct state injection to bypass the `read_file` step entirely, though LLM context typically requires text input.
+
+
 56|
 57|**[Priority: Med] | [Category: Architecture] | Block-Based Orchestration (Save, Boot, & General)**
 58|- **Description:** Replace manual, procedural loops in the Save Session, Boot Sequence, and other repetitive harness processes with a "Compartmentalized Execution" model. This involves grouping gates into logical blocks (e.g., Synthesis -> Payload -> Commit) and using Python-based orchestrators to handle mechanical writes.

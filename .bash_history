@@ -154,3 +154,20 @@ hermes
 /stop
 clear
 hermes
+ls
+refresh
+cd agents
+l
+ls
+cd hyper-overlord/
+ls
+fluid hyper-overlord
+cp hyper-overlord agent-share
+cp hyper-overlord.md agent-share
+cd.. 
+cd ..
+ls
+cd ..
+ls
+cd boot-sequence/
+ls
