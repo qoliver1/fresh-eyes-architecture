@@ -64,9 +64,10 @@
 55|### ⚡ Medium Priority (Efficiency & Flow)
 
 **[Priority: Med] | [Category: Architecture] | Pre-Computed Payload System (Instant Hydration)**
-- **Description:** Shift payload generation from the *Boot* process to the *Save* process. Instead of running `hydrate.py` during activation, pre-generate and store dedicated payload files for each level (`payload-cold.md`, `payload-warm.md`, `payload-hot.md`) during the save sequence.
-- **Potential Impact:** Reduces boot-time tool-call overhead from multiple calls (terminal -> script -> read) to a single direct `read_file` call. Enables "seamless agent swapping" and higher-velocity multi-agent orchestration.
-- **Research Note:** Investigate if Hermes supports any "context mounting" or direct state injection to bypass the `read_file` step entirely, though LLM context typically requires text input.
+|- **Description:** Shift payload generation from the *Boot* process to the *Save* process. Instead of running `hydrate.py` during activation, pre-generate and store dedicated payload files for each level (`payload-cold.md`, `payload-warm.md`, `payload-hot.md`) during the save sequence.
+|- **Potential Impact:** Reduces boot-time tool-call overhead from multiple calls (terminal -> script -> read) to a single direct `read_file` call. Enables "seamless agent swapping" and higher-velocity multi-agent orchestration.
+|- **Risk Mitigation:** Eliminates the need for mandatory temporary file deletion during boot. By storing payloads in timestamped session folders, we remove the risk of "Stale State Residue" (where an agent loads a payload from a previous failed boot) without losing historical data.
+|- **Research Note:** Investigate if Hermes supports any "context mounting" or direct state injection to bypass the `read_file` step entirely, though LLM context typically requires text input.
 
 
 56|

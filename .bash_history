@@ -171,3 +171,26 @@ cd ..
 ls
 cd boot-sequence/
 ls
+Hermes
+hermes
+cd agents
+ls
+cd hyper-overlord/
+ls
+cd hyper-overlord.md
+ls
+cd agent
+ls
+cd agents
+ls
+cd hyper-overlord/
+ls
+realpath hyper-overlord.md
+ls
+hermes
+hermes
+sshd
+hermes -z Hello how's it going today what's the latest news on our current project what's the latest update 
+exit
+clear
+exit
