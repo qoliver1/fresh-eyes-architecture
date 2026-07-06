@@ -194,3 +194,38 @@ hermes -z Hello how's it going today what's the latest news on our current proje
 exit
 clear
 exit
+hermes
+twsttest
+ls
+cd agents
+ls
+cd agent-zero/
+cd ..
+ls
+cd hyper-overlord/hy
+ls
+cd hyper-overlord/
+LS
+ls
+realpath hyper-overlord.md
+sshd
+exit
+hermes
+ls
+sshd
+hermes config set tts.provider termux_android_system_voice
+hermes config set tts.provider groq_orpheu
+hermes config set tts.providers.groq_orpheus.type command
+hermes config set tts.providers.groq_orpheus.command "python3 /data/data/com.termux/files/home/scripts/groq_voice.py {input_path} {output_path}"
+hermes config set tts.providers.groq_orpheus.output_format wav
+hermes
+hermes --resume
+hermes help
+hermes --resume 20260705_014348_bd74ed
+hermes
+pkg install -y clang make - &&     pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install brotli requests urllib3 && pkg install -y clang make - &&     pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install brotli requests urllib3 && pkg install -y clang make - &&     pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install brotli requests urllib3 &&   pkg install -y clang make &&     pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install brotli requests urllib3 &&   pkg install -y clang make &&     pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install brotli requests urllib3 && pkg install -y clang make &&     pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install brotli requests urllib3 &&     python3 -c "import requests; print('Network libraries healthy')"
+pip uninstall -y brotli brotlicffi requests urllib3 &&     pip install requests urllib3 &&     python3 -c "import requests; print('Network libraries healthy')"
+pkg uninstall -y python-brotli && pip uninstall -y brotli brotlicffi requests urllib3 && pip install requests urllib3 && python3 -c "import requests; print('Network libraries healthy')"
+hermes
+still working? 
+sshd
