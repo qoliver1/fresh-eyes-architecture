@@ -9,10 +9,7 @@ Last updated: July 22, 2026
 ### 1. Fresh Eyes Framework (home dir)
 - Location: ~/
 - Remote: github.com/qoliver1/fresh-eyes-architecture.git
-- Branches:
-  - feature/android-tts (current, active work)
-  - experimental/voice-integration
-  - master (older baseline)
+- Branch: main (ONLY branch, simple)
 - Contains: markdown docs, backlog, journal, framework specs, scripts/
 - This is YOUR work, pushed to YOUR GitHub repo
 
@@ -46,14 +43,14 @@ Last updated: July 22, 2026
   git pull origin main
   ```
 
-### Branch: my-changes
-- Created for your local experiments
-- Branches off from the same commit as main (0144743b2)
-- The backup script auto-switches to this branch when committing source changes
+### Branch: feature/android-tts (ACTIVE)
+- This is where you hack on TTS / Termux API integration
+- Currently checked out and ready for work
+- Changes here stay local (upstream is read-only)
 - To see what you've changed vs baseline:
   ```
   cd ~/hermes-agent
-  git diff fresh-install-baseline..my-changes
+  git diff fresh-install-baseline..feature/android-tts
   ```
 
 ---
@@ -74,8 +71,8 @@ backup-checkpoint --help                   # show usage
 ```
 
 ### What it does
-1. Commits changes in ~/ (fresh-eyes framework docs) and pushes to qoliver1/fresh-eyes-architecture.git
-2. Switches to my-changes branch in ~/hermes-agent/, commits source changes (stays local since upstream is read-only)
+1. Commits changes in ~/ (fresh-eyes framework docs) on main branch, pushes to GitHub
+2. Switches to feature/android-tts in ~/hermes-agent/, commits source changes (local only)
 3. Skips venv/, node_modules/, __pycache__, *.pyc
 
 ### .gitignore (home dir)
@@ -83,14 +80,50 @@ Excludes: .hermes/, .cache/, .cargo/, .config/, .local/, .npm/, .ssh/, .termux/,
 
 ---
 
+## THE TTS WORKFLOW
+
+When you want to hack on TTS (sending Hermes messages to Android Termux TTS API):
+
+1. Make sure you're on the right branch:
+   ```
+   cd ~/hermes-agent
+   git checkout feature/android-tts
+   ```
+
+2. Edit the source code (the message loop, API calls, etc.)
+
+3. Test it. If it works, checkpoint:
+   ```
+   backup-checkpoint --local "TTS experiment - what I changed"
+   ```
+
+4. If you break it and want to start over:
+   ```
+   cd ~/hermes-agent
+   git reset --hard fresh-install-baseline
+   ```
+
+5. If you want to pull fresh upstream code (get latest from NousResearch):
+   ```
+   cd ~/hermes-agent
+   git checkout main
+   git pull origin main
+   git checkout feature/android-tts   # switch back to your work branch
+   git rebase main                    # optional: replay your changes on top
+   ```
+
+---
+
 ## CLEANUP HISTORY (Jul 22, 2026)
 
-- Deleted ~/.hermes/hermes-agent/ (old dead copy from Jul 11 first install)
-  - Was 240 MB, unused, different commit (4281151 from Jul 11)
-  - Active copy is ~/hermes-agent/ (confirmed via shebang + running process)
+- Deleted ~/.hermes/hermes-agent/ (old dead copy from Jul 11 first install, 240 MB freed)
+- Confirmed active copy is ~/hermes-agent/ (via shebang + running process PID)
 - Set git global identity: Scribe Agent <scribe@hermes.local>
-- Fixed .gitignore to exclude hermes-agent/ (was showing as untracked)
-- Cleaned up old deleted temp files (cellar.md, helloworld.txt, personal-vault.md, temp.md, test.md, tts_test_input.txt)
+- Fixed .gitignore to exclude hermes-agent/ from framework repo
+- Consolidated framework repo to single "main" branch (deleted master, feature/android-tts, experimental/voice-integration)
+- Changed GitHub default branch to main
+- Created feature/android-tts branch in hermes-agent source for TTS hacking
+- Removed my-changes branch (replaced by feature/android-tts)
 
 ---
 
@@ -105,23 +138,26 @@ Excludes: .hermes/, .cache/, .cargo/, .config/, .local/, .npm/, .ssh/, .termux/,
 
 ## QUICK REFERENCE
 
-| Task                         | Command                                              |
-|------------------------------|------------------------------------------------------|
-| Checkpoint both repos        | `backup-checkpoint`                                  |
-| Checkpoint (no push)         | `backup-checkpoint --local`                           |
-| Check status of both         | `backup-checkpoint --status`                          |
-| Revert source to baseline    | `cd ~/hermes-agent && git reset --hard fresh-install-baseline` |
-| Pull upstream source updates | `cd ~/hermes-agent && git checkout main && git pull` |
-| See source changes vs baseline| `cd ~/hermes-agent && git diff fresh-install-baseline..my-changes` |
-| See all tags                 | `cd ~/hermes-agent && git tag -l`                    |
-| See all branches             | `cd ~/hermes-agent && git branch -vv`                |
-| See framework branches       | `cd ~ && git branch -vv`                             |
+| Task                          | Command                                              |
+|-------------------------------|------------------------------------------------------|
+| Checkpoint both repos          | `backup-checkpoint`                                  |
+| Checkpoint (no push)          | `backup-checkpoint --local`                          |
+| Check status of both          | `backup-checkpoint --status`                         |
+| Revert source to baseline     | `cd ~/hermes-agent && git reset --hard fresh-install-baseline` |
+| Pull upstream source updates  | `cd ~/hermes-agent && git checkout main && git pull` |
+| Switch to TTS hacking branch  | `cd ~/hermes-agent && git checkout feature/android-tts` |
+| See source changes vs baseline| `cd ~/hermes-agent && git diff fresh-install-baseline..feature/android-tts` |
+| See all tags                  | `cd ~/hermes-agent && git tag -l`                    |
+| See all branches              | `cd ~/hermes-agent && git branch -vv`                |
+| See framework branches        | `cd ~ && git branch -vv`                             |
 
 ---
 
 ## NOTES
 
-- The hermes-agent source remote is NousResearch (upstream). You cannot push to it. If you want to push source experiments online, you'd need to create your own fork on GitHub and add it as a second remote.
-- The 438 commits behind is normal — the upstream repo is very active (100+ commits/day around Jul 20-21).
-- The package-lock.json that showed as modified was just npm auto-fixing platform-specific peer deps on Android. Harmless.
-- ~/hermes-agent/ is 961 MB but most of that is venv/ and node_modules/. The actual source is much smaller.
+- Framework repo: ONE branch (main). Keep it simple. Docs only.
+- Source repo: TWO branches (main = upstream, feature/android-tts = your TTS work).
+- The hermes-agent source remote is NousResearch (upstream). You cannot push to it.
+- If you want to push source experiments online, create your own fork on GitHub and add it as a second remote.
+- The 438 commits behind is normal — the upstream repo is very active (100+ commits/day).
+- ~/hermes-agent/ is 961 MB but most of that is venv/ and node_modules/.

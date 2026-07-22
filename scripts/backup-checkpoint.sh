@@ -113,10 +113,10 @@ echo ""
 echo "--- HERMES SOURCE (~/hermes-agent) ---"
 cd "$HERMES_DIR"
 
-# Switch to my-changes branch (where personal edits go)
+# Switch to feature/android-tts branch (where personal source edits go)
 CURRENT_BRANCH=$(git branch --show-current)
-if [ "$CURRENT_BRANCH" != "my-changes" ]; then
-  git checkout my-changes 2>/dev/null || true
+if [ "$CURRENT_BRANCH" != "feature/android-tts" ]; then
+  git checkout feature/android-tts 2>/dev/null || true
   CURRENT_BRANCH=$(git branch --show-current)
 fi
 echo "  Branch: $CURRENT_BRANCH"
@@ -146,6 +146,5 @@ echo "============================================"
 echo "  CHECKPOINT COMPLETE"
 echo "============================================"
 echo ""
-echo "  Baseline tag:  fresh-install-baseline"
 echo "  To revert src: cd ~/hermes-agent && git reset --hard fresh-install-baseline"
 echo ""
