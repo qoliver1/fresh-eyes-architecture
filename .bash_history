@@ -229,3 +229,209 @@ pkg uninstall -y python-brotli && pip uninstall -y brotli brotlicffi requests ur
 hermes
 still working? 
 sshd
+hermes
+hi
+hermes session
+hermes --continue
+git status
+git diff
+git status
+find . -name "agent_init.py"
+less path/to/file.py
+less /.hermes/hermes-agent/agent/agent_init.py
+les "./.hermes/hermes-agent/agent/agent_init.py"
+less "./.hermes/hermes-agent/agent/agent_init.py"
+ls
+cd agent-share
+ls
+mkdir chunk-text
+ls
+cd chunk-text/
+hermes
+hermes setup
+hermes doctor
+hermes doctor --fix
+sshd
+lss
+la
+ls
+pkill -f hermes
+rm -rf ~/.hermes ~/hermes
+npm uninstall -g hermes-bridge
+rm -rf ~/.hermes ~/hermes
+npm uninstall -g hermes-bridge
+apt clean && npm cache clean --force
+up to date in 2s
+~ $ apt clean && npm cache clean --force
+npm warn using --force Recommended protections disabled.
+grep -i "hermes" ~/.bashrc ~/.zshrc ~/.profile 2>/dev/null
+rm -f $PREFIX/bin/hermes
+rm -rf ~/hermes-agent
+rm -rf ~/.hermes
+exit
+hermes --version
+hermes
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash --verbose
+pkg install libffi openssl ca-certificates curl
+cd /data/data/com.termux/files/home/.hermes/hermes-agent
+python -m pip install -e '.[termux-all]' -c constraints-termux.txt
+grep psutil constraints-termux.txt
+python --version
+python -m pip install psutil -v
+ls
+ERROR: Failed to build 'psutil' when getting requirements to build wheel
+~/.hermes/hermes-agent $python -m pip index versions psutil
+python -m pip index versions psutil
+python -m pip install "psutil==7.0.0"
+cd ~/.hermes/hermes-agent
+ls scripts | grep install_psutil_android
+python scripts/install_psutil_android.py
+python -m pip install --upgrade setuptools wheel
+python -c "import setuptools; print(setuptools.__version__)"
+python scripts/install_psutil_android.py
+rm -rf ~/.hermes/hermes-agent
+ls
+cd ..
+ls
+cd ..
+ls
+rm -rf ~/.hermes/hermes-agent
+ls -la ~/.hermes
+rm -rf ~/.hermes/hermes-agent
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+pkg install clang rust make pkg-config libffi openssl ca-certificates curl
+cd ~/.hermes/hermes-agent
+python -m pip install -e '.[termux-all]' -c constraints-termux.txt
+pkg search python
+pkg install python-cryptography python-pydantic-core python-watchfiles
+cd ..
+pkg install python-cryptography python-pydantic-core python-watchfiles
+ng availability of current mirror:
+[*] https://mirrors.utermux.dev/termux/termux-main: ok
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package python-pydantic-core
+E: Unable to locate package python-watchfiles
+~/.hermes/hermes-agent $ cd ..
+~/.hermes $ cd ..
+~ $ pkg install python-cryptography python-pydantic-core python-watchfilesNo mirror or mirror group selected. You might want to select one by running 'termux-change-repo'
+Checking availability of current mirror:
+[*] https://mirrors.utermux.dev/termux/termux-main: ok
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package python-pydantic-core
+pkg update
+pkg update && pkg upgrade
+pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
+git clone https://github.com/NousResearch/hermes-agent.git
+cd hermes-agent
+python -m venv venv
+source venv/bin/activateactivate
+la
+ls
+cd hermes
+source
+source venv/bin/activate
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+python --version 
+exit
+pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
+[200~python -m pip install -e '.[termux]' -c constraints-termux.txt~
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+ls
+sshd
+ipconfig wlan0
+ifconfig wlan0
+python -m pip install --upgrade pip setuptools wheel
+pkg update
+pkg upgrade
+pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
+ls
+git clone https://github.com/NousResearch/hermes-agent.git
+rm hermes-agent
+cd hermes-agent
+python -m venv venv
+source venv/bin/activate
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+cd ..
+rm -rf hermes-agent
+..
+cd ..
+;s
+ls
+cd ..
+ls
+rm -rf hermes-agent
+ls
+git clone https://github.com/NousResearch/hermes-agent.git
+sshd
+ifconfig
+exit
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+pkg update
+pkg upgrade
+pkg update
+pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
+ls
+cd hermes-agent
+cd ..
+git clone https://github.com/NousResearch/hermes-agent.git
+ls
+rm -rf hermes-agent
+git clone https://github.com/NousResearch/hermes-agent.git
+cd hermes-agent
+python -m venv venv
+python -m venv venvc
+source venv/bin/activate
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
+python -m venv venv
+source venv/bin/activate
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+pkg update && pkg upgrade -y
+uv venv --python 3.12
+pgk uv
+pkg install -y git clang rust make pkg-config libffi openssl uv
+uv venv --python 3.12
+uv venv --python /data/data/com.termux/files/usr/bin/python3.12
+rm -rf ~/hermes-agent/.venv
+pkg install tur-repo
+apt upgrade
+pkg search python3.1
+pkg install python3.13
+which python
+pkg install which
+which python
+python --version
+deactivate
+rm -rf venv
+python3.13 -m venv venv
+source venv/bin/activate
+python --version
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+pkg install build-essential clang python3.13-dev
+pkg install clang make
+pip install psutil
+python -m venv venv
+source venv/bin/activate
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"   # needed for Rust/maturin packages like jiter
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+python scripts/install_psutil_android.py
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+python -m pip install -e '.[termux]' -c constraints-termux.txt -v
+ln -sf "$PWD/venv/bin/hermes" "$PREFIX/bin/hermes"
+hermes version
+hermes --no-fast-version version
+hermes doctor
+hermes setup
+hermes doctor
+hermes
