@@ -27,3 +27,15 @@
 - **Discussed:** Session Durability. Validated the utility of SQLite and Prompt Caching for seamless state resumption.
 - **Observation:** The current `chat.md` format is a linear log. To evolve this into a true "Architectural Ledger," agents should treat this as a dialectic exchange—challenging logic, identifying blind spots, and proposing iterative improvements rather than just logging status.
 - **Identity:** Active Agent: Hermes.
+
+---
+
+### Session: 2026-07-22 (Git Consolidation & Backup System)
+- **Dead Copy Cleanup:** Discovered and deleted a second orphaned hermes-agent clone in ~/.hermes/hermes-agent/ (Jul 11 install, 240 MB). Confirmed active install is ~/hermes-agent/ via shebang and running process PID.
+- **Framework Branch Consolidation:** Collapsed fresh-eyes framework repo from 3 branches (master, feature/android-tts, experimental/voice-integration) to a single `main` branch. Changed GitHub default branch. Deleted old branches locally and remotely. Framework is now simple: one branch, docs only.
+- **Source Code Branch Setup:** Set up ~/hermes-agent/ with two branches: `main` (tracks upstream NousResearch for pulling updates) and `feature/android-tts` (for hacking TTS/Termux API integration). Tagged clean state as `fresh-install-baseline` for instant revert if source gets bricked.
+- **Backup Script:** Created ~/scripts/backup-checkpoint.sh (symlinked as `backup-checkpoint`). One command checkpoints both repos. Commands: `backup-checkpoint` (commit+push), `--local` (commit only), `--status` (view both). Script auto-switches to feature/android-tts for source commits, skips venv/node_modules.
+- **Git Identity:** Set global identity to Scribe Agent <scribe@hermes.local>. GitHub account: qoliver1.
+- **Reference Doc:** Created git-backup-reference.md in home dir with full breakdown of both repos, branches, commands, and TTS workflow.
+- **Verification:** 14/14 ad-hoc checks passed. Both repos pushed to GitHub. All clean.
+- **Identity:** Active Agent: Hermes.
