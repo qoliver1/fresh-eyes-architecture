@@ -10,7 +10,7 @@
 #
 # What it does:
 #   1. Commits any changes in ~/ (fresh-eyes framework docs)
-#   2. Commits any changes in ~/hermes-agent/ (Hermes source code — on my-changes branch)
+#   2. Commits any changes in ~/hermes-agent/ (Hermes source code — on feature/android-tts branch)
 #   3. Pushes both to their remotes (unless --local)
 #
 # Repos:
@@ -71,11 +71,11 @@ if [ "$STATUS_ONLY" = true ]; then
   cd "$HOME_DIR"
   git status -s
   echo ""
-  echo "--- HERMES SOURCE (~/hermes-agent, branch: my-changes) ---"
+  echo "--- HERMES SOURCE (~/hermes-agent, branch: feature/android-tts) ---"
   cd "$HERMES_DIR"
-  git checkout my-changes 2>/dev/null || true
+  git checkout feature/android-tts 2>/dev/null || true
   git status -s
-  git checkout main 2>/dev/null || true
+  git checkout feature/android-tts 2>/dev/null || true
   echo ""
   exit 0
 fi
